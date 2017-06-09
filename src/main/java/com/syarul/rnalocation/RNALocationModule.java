@@ -124,14 +124,14 @@ public class RNALocationModule extends ReactContextBaseJavaModule implements Loc
             if (location.hasAltitude()) {
                 params.putDouble("Altitude", location.getAltitude());
             }
-            params.putLong("Time", location.getTime());
+            params.putDouble("Time", (double)location.getTime());
             params.putString("Provider", location.getProvider());
             params.putString("Description", location.toString());
             if (location.hasSpeed()) {
-                params.putFloat("Speed", location.getSpeed());
+                params.putDouble("Speed", (double)location.getSpeed());
             }
             if (location.hasAccuracy()) {
-                params.putFloat("Accuracy", location.getAccuracy());
+                params.putDouble("Accuracy", (double)location.getAccuracy());
             }
             if (location.hasBearing()) {
                 params.putDouble("Bearing", location.getBearing());
